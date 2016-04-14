@@ -13,14 +13,15 @@ var REFLUX = 'reflux';
 var REACT_ROUTER = 'reactRouter';
 var ISCROLL_LITE = 'iscrollLite';
 
-var OUTPUT_DIR = "./appidco42tmvf57";
-
+var PROD_OUTPUT_DIR = "./appidco42tmvf57";
+var DEBUG_OUTPUT_DIR = "./output";
 
 fis.set('project.charset', 'utf-8');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '_');
 fis.set('project.ignore', [
 	'node_modules/**',
+	'appidco42tmvf57/**',
 	'output/**',
 	'fis-conf.js',
 	'webpack.config.js',
@@ -49,13 +50,7 @@ fis.match('*.less', {
 	moduleId: "$1"
 }).match("**/{mod,napossdk}.js", {
 	isMod: false
-}).match("/pages/(*.html)", {
-	domain: LOCAL_HOST_DOMAIN,
-	release: "/$1",
-	deploy: fis.plugin('local-deliver', {
-		to: OUTPUT_DIR
-	})
-});
+})
 
 
 //开发环境规则
@@ -69,7 +64,14 @@ development.match('::package', {
 development.match('*.{jsx,js,less,css,png,jpg,jpeg,svg,eot,ttf,woff}', {
 	domain: LOCAL_HOST_DOMAIN,
 	deploy: fis.plugin('local-deliver', {
-		to: OUTPUT_DIR
+		to: DEBUG_OUTPUT_DIR
+	})
+});
+development.match("/pages/(*.html)", {
+	domain: LOCAL_HOST_DOMAIN,
+	release: "/$1",
+	deploy: fis.plugin('local-deliver', {
+		to: DEBUG_OUTPUT_DIR
 	})
 });
 
@@ -79,7 +81,7 @@ var packToJs = "/pkg/pack.js";
 var packToCss = "/pkg/style.css";
 var production = fis.media("prod");
 
-production.match("*.{js,jsx}",{
+production.match("*.{js,jsx}", {
 	optimizer: fis.plugin('uglify-js', {}),
 	packTo: packToJs
 }).match('::package', {
@@ -92,31 +94,38 @@ production.match("*.{js,jsx}",{
 production.match('*.less', {
 	useSprite: true,
 	packTo: packToCss,
-	optimizer: fis.plugin('clean-css',{})
+	optimizer: fis.plugin('clean-css', {})
 });
 
 
 /*
-//分享页面单独打包处理
-production.match("/widget/sharePage/{*,**!/!*}.{js,jsx}",{
-	packTo: "/pkg/sharePage.js"
-});
+ //分享页面单独打包处理
+ production.match("/widget/sharePage/{*,**!/!*}.{js,jsx}",{
+ packTo: "/pkg/sharePage.js"
+ });
 
-production.match("/static/inSharePage.js",{
-	packTo: "/pkg/sharePage.js"
-});
+ production.match("/static/inSharePage.js",{
+ packTo: "/pkg/sharePage.js"
+ });
 
-production.match('/widget/sharePage/!*.less', {
-	packTo: '/pkg/sharePage.css'
-});
-*/
+ production.match('/widget/sharePage/!*.less', {
+ packTo: '/pkg/sharePage.css'
+ });
+ */
 
 
 production.match('*.{jsx,js,less,css,png,jpg,jpeg,svg,eot,ttf,woff}', {
 	domain: PRODUCTION_DOMAIN,
 	useHash: true,
 	deploy: fis.plugin('local-deliver', {
-		to: OUTPUT_DIR
+		to: PROD_OUTPUT_DIR
+	})
+});
+production.match("/pages/(*.html)", {
+	domain: PRODUCTION_DOMAIN,
+	release: "/$1",
+	deploy: fis.plugin('local-deliver', {
+		to: PROD_OUTPUT_DIR
 	})
 });
 

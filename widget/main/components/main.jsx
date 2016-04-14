@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "/widget/header/components/header.jsx";
+import Footer from "/widget/footer/components/footer.jsx"
 import {History} from "reactRouter";
 
 var MainView = React.createClass({
@@ -30,6 +31,7 @@ var MainView = React.createClass({
 				<div className="m-main">
 					{this.renderChildren()}
 				</div>
+				<Footer />
 			</div>);
 	}
 });
