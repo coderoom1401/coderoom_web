@@ -10,7 +10,7 @@
   "scripts": {
     "prod": "fis3 release prod -c",
     "debug": "fis3 release debug -cw",
-    "start": "node /output/pkg/pack_485dbab3.js"
+    "start": "node server.js"
   },
   "author": "lawrence",
   "license": "ISC",
