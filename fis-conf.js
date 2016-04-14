@@ -96,8 +96,9 @@ production.match('*.less', {
 });
 
 
+/*
 //分享页面单独打包处理
-production.match("/widget/sharePage/{*,**/*}.{js,jsx}",{
+production.match("/widget/sharePage/{*,**!/!*}.{js,jsx}",{
 	packTo: "/pkg/sharePage.js"
 });
 
@@ -105,9 +106,10 @@ production.match("/static/inSharePage.js",{
 	packTo: "/pkg/sharePage.js"
 });
 
-production.match('/widget/sharePage/*.less', {
+production.match('/widget/sharePage/!*.less', {
 	packTo: '/pkg/sharePage.css'
 });
+*/
 
 
 production.match('*.{jsx,js,less,css,png,jpg,jpeg,svg,eot,ttf,woff}', {
