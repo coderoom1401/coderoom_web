@@ -13,7 +13,7 @@ var REFLUX = 'reflux';
 var REACT_ROUTER = 'reactRouter';
 var ISCROLL_LITE = 'iscrollLite';
 
-var OUTPUT_DIR = "./output";
+var OUTPUT_DIR = "./appidco42tmvf57";
 
 
 fis.set('project.charset', 'utf-8');
