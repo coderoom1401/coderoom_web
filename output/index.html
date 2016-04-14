@@ -11,12 +11,25 @@
   <meta http-equiv="Expires" content="0" />
 
   <title>程序员之家</title>
-    <link rel="stylesheet" type="text/css" href="/pkg/style_5b141590.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style/jquery.ui.css" />
+    <link rel="stylesheet" type="text/css" href="/widget/header/header.css" />
 </head>
 
 <body>
 
-  <script src="/pkg/pack_485dbab3.js"></script>
+  <script src="/static/lib/mod.js"></script>
+<script type="text/javascript" src="/static/lib/jquery.js"></script>
+<script type="text/javascript" src="/static/lib/jquery_iframe_transport.js"></script>
+<script type="text/javascript" src="/static/lib/jquery_ui_widget.js"></script>
+<script type="text/javascript" src="/static/lib/jquery_fileuploader.js"></script>
+<script type="text/javascript" src="/static/lib/react.js"></script>
+<script type="text/javascript" src="/static/lib/reactRouter.js"></script>
+<script type="text/javascript" src="/widget/header/components/header.js"></script>
+<script type="text/javascript" src="/widget/main/components/main.js"></script>
+<script type="text/javascript" src="/static/lib/jquery.ui.js"></script>
+<script type="text/javascript" src="/static/entry.js"></script>
 <script>
     /**
       * @require static/style/reset.less
@@ -28,43 +41,37 @@
     var _map = {
     "res": {
         "static/lib/mod.js": {
-            "uri": "/static/lib/mod_8cdad3aa.js",
-            "type": "js",
-            "pkg": "p0"
+            "uri": "/static/lib/mod.js",
+            "type": "js"
         },
         "static/style/reset.less": {
-            "uri": "/static/style/reset_69da0368.css",
-            "type": "css",
-            "pkg": "p1"
+            "uri": "/static/style/reset.css",
+            "type": "css"
         },
         "static/style/common.less": {
-            "uri": "/static/style/common_8ce40baa.css",
-            "type": "css",
-            "pkg": "p1"
+            "uri": "/static/style/common.css",
+            "type": "css"
         },
         "static/style/jquery.ui.less": {
-            "uri": "/static/style/jquery.ui_3cc0148e.css",
-            "type": "css",
-            "pkg": "p1"
+            "uri": "/static/style/jquery.ui.css",
+            "type": "css"
         },
         "static/lib/jquery_iframe_transport.js": {
-            "uri": "/static/lib/jquery_iframe_transport_8224668c.js",
+            "uri": "/static/lib/jquery_iframe_transport.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/lib/jquery_iframe_transport"
             },
             "deps": [
                 "jquery"
-            ],
-            "pkg": "p0"
+            ]
         },
         "jquery": {
-            "uri": "/static/lib/jquery_91b72885.js",
-            "type": "js",
-            "pkg": "p0"
+            "uri": "/static/lib/jquery.js",
+            "type": "js"
         },
         "static/lib/jquery_fileuploader.js": {
-            "uri": "/static/lib/jquery_fileuploader_c5955628.js",
+            "uri": "/static/lib/jquery_fileuploader.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/lib/jquery_fileuploader"
@@ -72,22 +79,20 @@
             "deps": [
                 "jquery",
                 "static/lib/jquery_ui_widget.js"
-            ],
-            "pkg": "p0"
+            ]
         },
         "static/lib/jquery_ui_widget.js": {
-            "uri": "/static/lib/jquery_ui_widget_9faf3742.js",
+            "uri": "/static/lib/jquery_ui_widget.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/lib/jquery_ui_widget"
             },
             "deps": [
                 "jquery"
-            ],
-            "pkg": "p0"
+            ]
         },
         "static/entry.jsx": {
-            "uri": "/static/entry_7bf06108.js",
+            "uri": "/static/entry.js",
             "type": "js",
             "deps": [
                 "react",
@@ -95,138 +100,95 @@
                 "jquery",
                 "widget/main/components/main.jsx",
                 "static/lib/jquery.ui.js"
-            ],
-            "pkg": "p0"
+            ]
         },
         "widget/main/components/main.jsx": {
-            "uri": "/widget/main/components/main_bae93e5d.js",
+            "uri": "/widget/main/components/main.js",
             "type": "js",
             "deps": [
                 "react",
                 "widget/header/components/header.jsx",
                 "reactRouter"
-            ],
-            "pkg": "p0"
+            ]
         },
         "widget/header/components/header.jsx": {
-            "uri": "/widget/header/components/header_4bb1878d.js",
+            "uri": "/widget/header/components/header.js",
             "type": "js",
             "deps": [
                 "widget/header/header.less",
                 "react",
                 "reactRouter"
-            ],
-            "pkg": "p0"
+            ]
         },
         "widget/header/header.less": {
-            "uri": "/widget/header/header_f7d43ac4.css",
-            "type": "css",
-            "pkg": "p1"
+            "uri": "/widget/header/header.css",
+            "type": "css"
         },
         "static/lib/jquery.ui.js": {
-            "uri": "/static/lib/jquery.ui_f97706ac.js",
+            "uri": "/static/lib/jquery.ui.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/lib/jquery.ui"
             },
             "deps": [
                 "jquery"
-            ],
-            "pkg": "p0"
+            ]
+        },
+        "server.js": {
+            "uri": "/server.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "server"
+            }
         },
         "static/constants.js": {
-            "uri": "/static/constants_0a98099c.js",
+            "uri": "/static/constants.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/constants"
-            },
-            "pkg": "p0"
+            }
         },
         "lodash": {
-            "uri": "/static/lib/lodash_a078d832.js",
-            "type": "js",
-            "pkg": "p0"
+            "uri": "/static/lib/lodash.js",
+            "type": "js"
         },
         "static/lib/moment.js": {
-            "uri": "/static/lib/moment_8290be76.js",
+            "uri": "/static/lib/moment.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/lib/moment"
             },
             "deps": [
                 "./locale"
-            ],
-            "pkg": "p0"
+            ]
         },
         "react": {
-            "uri": "/static/lib/react_e5d62045.js",
-            "type": "js",
-            "pkg": "p0"
+            "uri": "/static/lib/react.js",
+            "type": "js"
         },
         "reactRouter": {
-            "uri": "/static/lib/reactRouter_22ec387c.js",
+            "uri": "/static/lib/reactRouter.js",
             "type": "js",
             "deps": [
                 "react"
-            ],
-            "pkg": "p0"
+            ]
         },
         "reflux": {
-            "uri": "/static/lib/reflux_87f1f05f.js",
+            "uri": "/static/lib/reflux.js",
             "type": "js",
             "deps": [
                 "eventemitter3"
-            ],
-            "pkg": "p0"
+            ]
         },
         "static/mixins/utils.js": {
-            "uri": "/static/mixins/utils_83a5c8a3.js",
+            "uri": "/static/mixins/utils.js",
             "type": "js",
             "extras": {
                 "moduleId": "static/mixins/utils"
-            },
-            "pkg": "p0"
+            }
         }
     },
-    "pkg": {
-        "p0": {
-            "uri": "/pkg/pack_485dbab3.js",
-            "type": "js",
-            "has": [
-                "static/lib/mod.js",
-                "jquery",
-                "static/lib/jquery_iframe_transport.js",
-                "static/lib/jquery_ui_widget.js",
-                "static/lib/jquery_fileuploader.js",
-                "react",
-                "reactRouter",
-                "widget/header/components/header.jsx",
-                "widget/main/components/main.jsx",
-                "static/lib/jquery.ui.js",
-                "static/entry.jsx",
-                "static/constants.js",
-                "lodash",
-                "static/lib/moment.js",
-                "reflux",
-                "static/mixins/utils.js"
-            ],
-            "deps": [
-                "widget/header/header.less",
-                "./locale",
-                "eventemitter3"
-            ]
-        },
-        "p1": {
-            "uri": "/pkg/style_5b141590.css",
-            "type": "css",
-            "has": [
-                "static/style/reset.less",
-                "static/style/common.less",
-                "static/style/jquery.ui.less",
-                "widget/header/header.less"
-            ]
-        }
-    }
+    "pkg": {}
 };
     require("static/lib/jquery_iframe_transport");
     require("static/lib/jquery_fileuploader");
