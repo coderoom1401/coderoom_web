@@ -1,1 +1,0 @@
-define("static/constants",function(){"use strict"});
