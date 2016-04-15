@@ -2,7 +2,7 @@
  * @require ../footer.less
  */
 import React from "react";
-
+import FriendLink from "/widget/friendlink/components/friendlink.jsx";
 var Footer = React.createClass({
 	getInitialState: function () {
 		return {};
@@ -17,7 +17,8 @@ var Footer = React.createClass({
 	render: function () {
 		return (
 			<div className="m-footer">
-				<div className="center">Copyright © 1998 - 2016 coderoom1401. All Rights Reserved</div>
+				<FriendLink />
+				<div className="center">Copyright © 2014 - 2016 coderoom1401. All Rights Reserved</div>
 			</div>
 		);
 	}

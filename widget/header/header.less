@@ -1,20 +1,34 @@
-@headerHeight: 60px;
-
+@headerHeight: 80px;
+@colorHeader: #6734b7;
 .m-header {
   height: @headerHeight;
-  background: #1087E3;
+  background-color: @colorHeader;
   position: fixed;
   width: 100%;
   z-index: 1000;
 
   .inner {
+    padding: 0px 24%;
     width: 100%;
     height: 100%;
-    padding: 0px 100px;
     h1 {
+      display: inline;
       line-height: @headerHeight;
       font-size: 30px;
-      color: #fff;
+      color: white;
     }
+    a {
+      cursor: pointer;
+      font-size: 18px;
+      display: inline;
+      color: lightgray;
+      line-height: @headerHeight;
+      position: relative;
+      float: right;
+    }
+    a:hover{
+      color: white;
+    }
+
   }
 }

@@ -31,7 +31,7 @@ var MainView = React.createClass({
 				<div className="m-main">
 					{this.renderChildren()}
 				</div>
-				<Footer />
+				<Footer/>
 			</div>);
 	}
 });
