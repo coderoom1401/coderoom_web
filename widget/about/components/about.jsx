@@ -20,4 +20,5 @@ var About = React.createClass({
 		);
 	}
 });
+
 export default About;
